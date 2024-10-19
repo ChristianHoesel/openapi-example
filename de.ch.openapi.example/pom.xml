@@ -143,19 +143,24 @@
                                 ${project.basedir}/src/main/resources/petstore.yaml
                             </inputSpec>
                             
-                            <generatorName>jaxrs-jersey</generatorName>
-                            <library>jersey3</library>
+                            <generatorName>jaxrs-spec</generatorName>
+                            <!--<library>jersey3</library>-->
                             <generateApiDocumentation>false</generateApiDocumentation>
+                            
                             <!-- <generateApis>false</generateApis> -->
-                            <!-- <output>${project.build.directory}/generated-sources/openapi</output> -->
+                            <!--<output>${project.build.directory}/generated-sources/openapi</output>-->
+                            <!--<output>${project.basedir}/src/gen/openapi</output>-->
                             <apiPackage>de.ch.openapi.example.petstore.api</apiPackage>
                             <modelPackage>de.ch.openapi.example.petstore.model</modelPackage>
                             <!-- <supportingFilesToGenerate>false</supportingFilesToGenerate> -->
                             <configOptions>
                                 <delegatePattern>true</delegatePattern>
-                                <!-- <sourceFolder>src/gen/java/main</sourceFolder> -->
+                                <!--<sourceFolder>src/gen/java/main</sourceFolder>-->
+                               <!--<sourceFolder>${project.build.directory}/generated-sources/openapi</sourceFolder>-->
                                 <dateLibrary>java8</dateLibrary>
+                                <useJakartaEe>true</useJakartaEe>
                                 <hideGenerationTimestamp>true</hideGenerationTimestamp>
+                                <!--<interfaceOnly>true</interfaceOnly>-->
                             </configOptions>
                             <generateSupportingFiles>false</generateSupportingFiles>
                             
