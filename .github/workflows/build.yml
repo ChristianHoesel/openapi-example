@@ -32,7 +32,7 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Build with Maven Wrapper
-      run: ./mvnw clean install -f de.ch.openapi.example/pom.xml
+      run: ./de.ch.openapi.example/mvnw clean install -f de.ch.openapi.example/pom.xml
 
     - name: Run tests
-      run: ./mvnw test -f de.ch.openapi.example/pom.xml
+      run: ./de.ch.openapi.example/mvnw test -f de.ch.openapi.example/pom.xml
